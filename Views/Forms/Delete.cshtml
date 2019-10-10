@@ -1,0 +1,160 @@
+﻿@model WebApp.Models.Form
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Form</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstMidName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstMidName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BirthDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BirthDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PhoneNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhoneNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MilitaryService)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MilitaryService)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TshirtSize)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TshirtSize)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PantSize)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PantSize)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ShoesSize)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ShoesSize)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DrivingLicence)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DrivingLicence)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DrivingLicenceClass)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DrivingLicenceClass)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ForkliftLicence)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ForkliftLicence)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CraneOperationLicense)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CraneOperationLicense)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WorkingNow)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WorkingNow)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JobChangeReason)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JobChangeReason)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ok4Overtime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ok4Overtime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ok4ShiftWork)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ok4ShiftWork)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

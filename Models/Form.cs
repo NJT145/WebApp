@@ -35,35 +35,24 @@ namespace WebApp.Models
 
         public bool ForkliftLicence { get; set; }
         public bool CraneOperationLicense { get; set; }
-        [Key]
-        [ForeignKey("CourseNSeminar")]
-        public int CourseNSeminarID { get; set; }
         public virtual CourseNSeminar CourseNSeminar { get; set; }
-        [Key]
-        [ForeignKey("LangInfo")]
-        public int LangInfoID { get; set; }
         public virtual LangInfo LangInfo { get; set; }
-        [Key]
-        [ForeignKey("ComputerSkill")]
-        public int ComputerSkillID { get; set; }
         public virtual ComputerSkill ComputerSkill { get; set; }
         // sağlık durumu ## 4.SAYFA ## ekle
         public bool WorkingNow { get; set; }
         public string JobChangeReason { get; set; }
-        [Key]
-        [ForeignKey("JobHistory")]
-        public int JobHistoryID { get; set; }
         public virtual JobHistory JobHistory { get; set; }
         public bool Ok4Overtime { get; set; }
         public bool Ok4ShiftWork { get; set; }
+        // 5.SAYFA gerisi eklenecek
     }
 
     public class FormDbContext : DbContext
     {
         public DbSet<Form> Forms { get; set; }
-        public DbSet<CourseNSeminar> CourseNSeminar { get; set; }
-        public DbSet<LangInfo> LangInfo { get; set; }
-        public DbSet<ComputerSkill> ComputerSkill { get; set; }
-        public DbSet<JobHistory> JobHistory { get; set; }
+        public DbSet<CourseNSeminar> CourseNSeminars { get; set; }
+        public DbSet<LangInfo> LangInfos { get; set; }
+        public DbSet<ComputerSkill> ComputerSkills { get; set; }
+        public DbSet<JobHistory> JobHistorys { get; set; }
     }
 }
