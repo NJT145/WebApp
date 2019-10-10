@@ -8,7 +8,7 @@ namespace WebApp.Models
 {
     public class JobHistory
     {
-        public int JobHistoryID { get; set; }
+        public int JobHistoryId { get; set; }
         public string Name { get; set; }
         public string Mission { get; set; }
         public int WorkDays { get; set; }

@@ -17,7 +17,8 @@ namespace WebApp.Controllers
         // GET: Forms
         public ActionResult Index()
         {
-            return View(db.Forms.ToList());
+            var forms = db.Forms.Include(f => f.ComputerSkill).Include(f => f.CourseNSeminar).Include(f => f.JobHistory).Include(f => f.LangInfo);
+            return View(forms.ToList());
         }
 
         // GET: Forms/Details/5
@@ -38,6 +39,10 @@ namespace WebApp.Controllers
         // GET: Forms/Create
         public ActionResult Create()
         {
+            ViewBag.ComputerSkillId = new SelectList(db.ComputerSkills, "ComputerSkillId", "Name");
+            ViewBag.CourseNSeminarId = new SelectList(db.CourseNSeminars, "CourseNSeminarId", "Certificate");
+            ViewBag.JobHistoryId = new SelectList(db.JobHistorys, "JobHistoryId", "Name");
+            ViewBag.LangInfoId = new SelectList(db.LangInfos, "LangInfoId", "Name");
             return View();
         }
 
@@ -46,7 +51,7 @@ namespace WebApp.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "FormID,FirstMidName,LastName,BirthDate,PhoneNumber,Address,MilitaryService,TshirtSize,PantSize,ShoesSize,DrivingLicence,DrivingLicenceClass,ForkliftLicence,CraneOperationLicense,WorkingNow,JobChangeReason,Ok4Overtime,Ok4ShiftWork")] Form form)
+        public ActionResult Create([Bind(Include = "FormId,FirstMidName,LastName,BirthDate,PhoneNumber,Address,MilitaryService,TshirtSize,PantSize,ShoesSize,DrivingLicence,DrivingLicenceClass,ForkliftLicence,CraneOperationLicense,CourseNSeminarId,LangInfoId,ComputerSkillId,WorkingNow,JobChangeReason,JobHistoryId,Ok4Overtime,Ok4ShiftWork")] Form form)
         {
             if (ModelState.IsValid)
             {
@@ -55,6 +60,10 @@ namespace WebApp.Controllers
                 return RedirectToAction("Index");
             }
 
+            ViewBag.ComputerSkillId = new SelectList(db.ComputerSkills, "ComputerSkillId", "Name", form.ComputerSkillId);
+            ViewBag.CourseNSeminarId = new SelectList(db.CourseNSeminars, "CourseNSeminarId", "Certificate", form.CourseNSeminarId);
+            ViewBag.JobHistoryId = new SelectList(db.JobHistorys, "JobHistoryId", "Name", form.JobHistoryId);
+            ViewBag.LangInfoId = new SelectList(db.LangInfos, "LangInfoId", "Name", form.LangInfoId);
             return View(form);
         }
 
@@ -70,6 +79,10 @@ namespace WebApp.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.ComputerSkillId = new SelectList(db.ComputerSkills, "ComputerSkillId", "Name", form.ComputerSkillId);
+            ViewBag.CourseNSeminarId = new SelectList(db.CourseNSeminars, "CourseNSeminarId", "Certificate", form.CourseNSeminarId);
+            ViewBag.JobHistoryId = new SelectList(db.JobHistorys, "JobHistoryId", "Name", form.JobHistoryId);
+            ViewBag.LangInfoId = new SelectList(db.LangInfos, "LangInfoId", "Name", form.LangInfoId);
             return View(form);
         }
 
@@ -78,7 +91,7 @@ namespace WebApp.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "FormID,FirstMidName,LastName,BirthDate,PhoneNumber,Address,MilitaryService,TshirtSize,PantSize,ShoesSize,DrivingLicence,DrivingLicenceClass,ForkliftLicence,CraneOperationLicense,WorkingNow,JobChangeReason,Ok4Overtime,Ok4ShiftWork")] Form form)
+        public ActionResult Edit([Bind(Include = "FormId,FirstMidName,LastName,BirthDate,PhoneNumber,Address,MilitaryService,TshirtSize,PantSize,ShoesSize,DrivingLicence,DrivingLicenceClass,ForkliftLicence,CraneOperationLicense,CourseNSeminarId,LangInfoId,ComputerSkillId,WorkingNow,JobChangeReason,JobHistoryId,Ok4Overtime,Ok4ShiftWork")] Form form)
         {
             if (ModelState.IsValid)
             {
@@ -86,6 +99,10 @@ namespace WebApp.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            ViewBag.ComputerSkillId = new SelectList(db.ComputerSkills, "ComputerSkillId", "Name", form.ComputerSkillId);
+            ViewBag.CourseNSeminarId = new SelectList(db.CourseNSeminars, "CourseNSeminarId", "Certificate", form.CourseNSeminarId);
+            ViewBag.JobHistoryId = new SelectList(db.JobHistorys, "JobHistoryId", "Name", form.JobHistoryId);
+            ViewBag.LangInfoId = new SelectList(db.LangInfos, "LangInfoId", "Name", form.LangInfoId);
             return View(form);
         }
 

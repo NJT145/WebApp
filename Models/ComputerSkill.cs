@@ -7,7 +7,7 @@ namespace WebApp.Models
 {
     public class ComputerSkill
     {
-        public int ComputerSkillID { get; set; }
+        public int ComputerSkillId { get; set; }
         public string Name { get; set; }
         public int Level { get; set; }
         public virtual ICollection<Form> Forms { get; set; }

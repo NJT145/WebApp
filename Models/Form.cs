@@ -7,7 +7,7 @@ namespace WebApp.Models
 {
     public class Form
     {
-        public int FormID { get; set; }
+        public int FormId { get; set; }
 
         [Required, StringLength(60, MinimumLength = 2)]
         public string FirstMidName { get; set; }
@@ -35,12 +35,16 @@ namespace WebApp.Models
 
         public bool ForkliftLicence { get; set; }
         public bool CraneOperationLicense { get; set; }
+        public int CourseNSeminarId { get; set; }
         public virtual CourseNSeminar CourseNSeminar { get; set; }
+        public int LangInfoId { get; set; }
         public virtual LangInfo LangInfo { get; set; }
+        public int ComputerSkillId { get; set; }
         public virtual ComputerSkill ComputerSkill { get; set; }
         // sağlık durumu ## 4.SAYFA ## ekle
         public bool WorkingNow { get; set; }
         public string JobChangeReason { get; set; }
+        public int JobHistoryId { get; set; }
         public virtual JobHistory JobHistory { get; set; }
         public bool Ok4Overtime { get; set; }
         public bool Ok4ShiftWork { get; set; }

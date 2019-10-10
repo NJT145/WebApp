@@ -9,7 +9,7 @@ namespace WebApp.Models
 {
     public class CourseNSeminar
     {
-        public int CourseNSeminarID { get; set; }
+        public int CourseNSeminarId { get; set; }
         public string Certificate { get; set; }
         public string Topic { get; set; }
         public virtual ICollection<Form> Forms { get; set; }
