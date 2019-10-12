@@ -7,6 +7,7 @@ namespace WebApp.Models
 {
     public class Form
     {
+        [Key]
         public int FormId { get; set; }
 
         [Required, StringLength(60, MinimumLength = 2)]
@@ -30,20 +31,24 @@ namespace WebApp.Models
         public decimal ShoesSize { get; set; }
         public bool DrivingLicence { get; set; }
 
-        [StringLength(10, MinimumLength = 0)]
+        [StringLength(10, MinimumLength = 1)]
         public string DrivingLicenceClass { get; set; }
 
         public bool ForkliftLicence { get; set; }
         public bool CraneOperationLicense { get; set; }
+        [ForeignKey("CourseNSeminar")]
         public int CourseNSeminarId { get; set; }
         public virtual CourseNSeminar CourseNSeminar { get; set; }
+        [ForeignKey("LangInfo")]
         public int LangInfoId { get; set; }
         public virtual LangInfo LangInfo { get; set; }
+        [ForeignKey("ComputerSkill")]
         public int ComputerSkillId { get; set; }
         public virtual ComputerSkill ComputerSkill { get; set; }
         // sağlık durumu ## 4.SAYFA ## ekle
         public bool WorkingNow { get; set; }
         public string JobChangeReason { get; set; }
+        [ForeignKey("JobHistory")]
         public int JobHistoryId { get; set; }
         public virtual JobHistory JobHistory { get; set; }
         public bool Ok4Overtime { get; set; }
