@@ -58,10 +58,6 @@ namespace WebApp.Models
 
     public class FormDbContext : DbContext
     {
-        public FormDbContext() : base("FormDbContext")
-        {
-        }
-
         public DbSet<Form> Forms { get; set; }
         public DbSet<CourseNSeminar> CourseNSeminars { get; set; }
         public DbSet<LangInfo> LangInfos { get; set; }

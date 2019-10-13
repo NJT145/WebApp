@@ -25,18 +25,11 @@ namespace WebApp.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string Setting {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDb)\\MSSQLLocalDB;Initial Catalog=aspnet-WebApp;Integrated Secur" +
+            "ity=SSPI;AttachDBFilename=|DataDirectory|\\WebAppDB.mdf")]
+        public string Setting1 {
             get {
-                return ((string)(this["Setting"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::System.Configuration.ConnectionStringsSection FormDbContext {
-            get {
-                return ((global::System.Configuration.ConnectionStringsSection)(this["FormDbContext"]));
+                return ((string)(this["Setting1"]));
             }
         }
     }

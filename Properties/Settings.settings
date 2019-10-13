@@ -2,11 +2,8 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="WebApp.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="Setting" Type="System.String" Scope="Application">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="FormDbContext" Type="System.Configuration.ConnectionStringsSection" Scope="Application">
-      <Value Profile="(Default)" />
+    <Setting Name="Setting1" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Data Source=(LocalDb)\MSSQLLocalDB;Initial Catalog=aspnet-WebApp;Integrated Security=SSPI;AttachDBFilename=|DataDirectory|\WebAppDB.mdf</Value>
     </Setting>
   </Settings>
 </SettingsFile>
