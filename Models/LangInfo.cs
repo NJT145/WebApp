@@ -12,10 +12,10 @@ namespace WebApp.Models
     {
         [Key]
         public int LangInfoId { get; set; }
-        [StringLength(30, MinimumLength = 0)]
-        public string Name { get; set; }
+        [StringLength(120, MinimumLength = 0)]
+        public string LangInfoName { get; set; }
         [Range(0, 4)]
-        public int Level { get; set; }
+        public int LangInfoLevel { get; set; }
         public virtual ICollection<Form> Forms { get; set; }
     }
 }

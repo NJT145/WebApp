@@ -12,13 +12,13 @@ namespace WebApp.Models
     {
         [Key]
         public int JobHistoryId { get; set; }
-        [StringLength(30, MinimumLength = 0)]
-        public string Name { get; set; }
-        [StringLength(60, MinimumLength = 0)]
+        [StringLength(250, MinimumLength = 0)]
+        public string JobHistoryName { get; set; }
+        [StringLength(250, MinimumLength = 0)]
         public string Mission { get; set; }
         [Range(0,1000000)]
         public int WorkDays { get; set; }
-        [StringLength(30, MinimumLength = 0)]
+        [StringLength(250, MinimumLength = 0)]
         public string Reason4Leaving { get; set; }
         public virtual ICollection<Form> Forms { get; set; }
     }

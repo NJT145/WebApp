@@ -12,13 +12,14 @@ namespace WebApp.Models
     {
         [Key]
         public int FormResultId { get; set; }
-        public bool Confirmed { get; set; }
-        public string Price { get; set; }
-        public string ShiftWork { get; set; }
-        public string ShiftWork2 { get; set; }
-        public string MilitaryService { get; set; }
-        public string EduStatus { get; set; }
-        public string Address { get; set; }
+        public bool FormResultConfirmed { get; set; }
+        public string FormResultPrice { get; set; }
+        public string FormResultShiftWork { get; set; }
+        public string FormResultShiftWork2 { get; set; }
+        public string FormResultMilitaryService { get; set; }
+        public string FormResultEduStatus { get; set; }
+        public string FormResultAddress { get; set; }
+        //[ForeignKey("Form")]
         public virtual Form Form { get; set; }
     }
 }

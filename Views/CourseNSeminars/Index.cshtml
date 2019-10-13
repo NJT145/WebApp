@@ -1,0 +1,39 @@
+﻿@model IEnumerable<WebApp.Models.CourseNSeminar>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Certificate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Topic)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Certificate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Topic)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.CourseNSeminarId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.CourseNSeminarId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.CourseNSeminarId })
+        </td>
+    </tr>
+}
+
+</table>

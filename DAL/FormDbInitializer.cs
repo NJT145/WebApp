@@ -8,10 +8,14 @@ namespace WebApp.DAL
         protected override void Seed(FormDbContext context)
         {
             // default values for empty values
-            context.ComputerSkills.Add(new ComputerSkill { Name = "", Level = 0 });
-            context.CourseNSeminars.Add(new CourseNSeminar { Certificate = "", Topic = "" });
-            context.JobHistories.Add(new JobHistory { Name = "", Mission = "", WorkDays = 0, Reason4Leaving = "" });
-            context.LangInfos.Add(new LangInfo { Name = "", Level = 0 });
+            var emptyComputerSkill = new ComputerSkill { ComputerSkillName = "", ComputerSkillLevel = 0 };
+            var emptyCourseNSeminar = new CourseNSeminar { Certificate = "", Topic = "" };
+            var emptyJobHistory = new JobHistory { JobHistoryName = "", Mission = "", WorkDays = 0, Reason4Leaving = "" };
+            var emptyLangInfo = new LangInfo { LangInfoName = "", LangInfoLevel = 0 };
+            context.ComputerSkills.Add(emptyComputerSkill);
+            context.CourseNSeminars.Add(emptyCourseNSeminar);
+            context.JobHistories.Add(emptyJobHistory);
+            context.LangInfos.Add(emptyLangInfo);
             context.SaveChanges();
 
             var form1 = new Form
@@ -19,16 +23,20 @@ namespace WebApp.DAL
                 FirstMidName = "Adam",
                 LastName = "AdamPie",
                 BirthDate = DateTime.Parse("2005-09-01"),
-                PhoneNumber = "(530) 300-3030",
+                PhoneNumber = "5303003030",
                 Address = "KISIKLI MAH., Alemdag Cad., Yanyol Sok., No 6-8, 34692, ÜSKÜDAR / ISTANBUL / TURKEY",
                 MilitaryService = "Yapıldı",
                 TshirtSize = float.Parse("53,5"),
                 PantSize = float.Parse("64,5"),
                 ShoesSize = float.Parse("64,5"),
-                DrivingLicence=true,
-                DrivingLicenceClass="A",
-                ForkliftLicence=true,
+                DrivingLicence = true,
+                DrivingLicenceClass = "A",
+                ForkliftLicence = true,
             };
+            form1.ComputerSkill = emptyComputerSkill;
+            form1.CourseNSeminar = emptyCourseNSeminar;
+            form1.JobHistory = emptyJobHistory;
+            form1.LangInfo = emptyLangInfo;
             context.Forms.Add(form1);
             context.SaveChanges();
         }

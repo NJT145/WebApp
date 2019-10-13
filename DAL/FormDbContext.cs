@@ -18,6 +18,7 @@ namespace WebApp.DAL
         public DbSet<LangInfo> LangInfos { get; set; }
         public DbSet<ComputerSkill> ComputerSkills { get; set; }
         public DbSet<JobHistory> JobHistories { get; set; }
+        public DbSet<FormResult> FormResults { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

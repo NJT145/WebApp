@@ -1,0 +1,82 @@
+﻿@model WebApp.Models.FormResult
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>FormResult</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Form.FirstMidName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Form.FirstMidName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FormResultConfirmed)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FormResultConfirmed)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FormResultPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FormResultPrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FormResultShiftWork)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FormResultShiftWork)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FormResultShiftWork2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FormResultShiftWork2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FormResultMilitaryService)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FormResultMilitaryService)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FormResultEduStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FormResultEduStatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FormResultAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FormResultAddress)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.FormResultId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

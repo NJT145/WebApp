@@ -25,7 +25,7 @@ namespace WebApp.Models
         //[RegularExpression(@"^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$", ErrorMessage = "Not a valid phone number")]
         public string PhoneNumber { get; set; }
 
-        [Required, StringLength(60, MinimumLength = 5)]
+        [Required, StringLength(250, MinimumLength = 5)]
         public string Address { get; set; }
         [StringLength(10, MinimumLength = 0)]
         public string MilitaryService { get; set; }

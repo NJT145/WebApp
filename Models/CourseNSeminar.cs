@@ -12,9 +12,9 @@ namespace WebApp.Models
     {
         [Key]
         public int CourseNSeminarId { get; set; }
-        [StringLength(30, MinimumLength = 0)]
+        [StringLength(250, MinimumLength = 0)]
         public string Certificate { get; set; }
-        [StringLength(30, MinimumLength = 0)]
+        [StringLength(250, MinimumLength = 0)]
         public string Topic { get; set; }
         public virtual ICollection<Form> Forms { get; set; }
     }

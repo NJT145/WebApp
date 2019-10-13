@@ -12,10 +12,10 @@ namespace WebApp.Models
     {
         [Key]
         public int ComputerSkillId { get; set; }
-        [StringLength(30, MinimumLength = 0)]
-        public string Name { get; set; }
+        [StringLength(250, MinimumLength = 0)]
+        public string ComputerSkillName { get; set; }
         [Range(0, 4)]
-        public int Level { get; set; }
+        public int ComputerSkillLevel { get; set; }
         public virtual ICollection<Form> Forms { get; set; }
     }
 }
