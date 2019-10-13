@@ -7,12 +7,11 @@ using System.Web;
 
 namespace WebApp.Models
 {
+    [Table("FormResults")]
     public class FormResult
     {
         [Key]
         public int FormResultId { get; set; }
-        [ForeignKey("Form")]
-        public int FormId { get; set; }
         public bool Confirmed { get; set; }
         public string Price { get; set; }
         public string ShiftWork { get; set; }
@@ -20,6 +19,7 @@ namespace WebApp.Models
         public string MilitaryService { get; set; }
         public string EduStatus { get; set; }
         public string Address { get; set; }
-        public virtual ICollection<Form> Forms { get; set; }
+        [ForeignKey("Form")]
+        public virtual Form Form { get; set; }
     }
 }

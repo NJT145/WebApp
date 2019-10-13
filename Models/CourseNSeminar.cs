@@ -7,13 +7,14 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace WebApp.Models
 {
+    [Table("CourseNSeminars")]
     public class CourseNSeminar
     {
         [Key]
         public int CourseNSeminarId { get; set; }
-        [ForeignKey("Form")]
-        public int FormId { get; set; }
+        [StringLength(30, MinimumLength = 0)]
         public string Certificate { get; set; }
+        [StringLength(30, MinimumLength = 0)]
         public string Topic { get; set; }
         public virtual ICollection<Form> Forms { get; set; }
     }

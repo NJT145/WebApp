@@ -1,10 +1,12 @@
 ﻿using System;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity;
 
 namespace WebApp.Models
 {
+    [Table("Forms")]
     public class Form
     {
         [Key]
@@ -19,63 +21,42 @@ namespace WebApp.Models
         [Required, DataType(DataType.Date), DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime BirthDate { get; set; }
 
-        [Required]//, DataType(DataType.PhoneNumber), DisplayFormat(DataFormatString = "{0: (###) ###-####}", ApplyFormatInEditMode = true)]
+        [Required, DataType(DataType.PhoneNumber), DisplayFormat(DataFormatString = "{0: (###) ###-####}", ApplyFormatInEditMode = true)]
+        //[RegularExpression(@"^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$", ErrorMessage = "Not a valid phone number")]
         public string PhoneNumber { get; set; }
 
         [Required, StringLength(60, MinimumLength = 5)]
         public string Address { get; set; }
-
+        [StringLength(10, MinimumLength = 0)]
         public string MilitaryService { get; set; }
-        public decimal TshirtSize { get; set; }
-        public decimal PantSize { get; set; }
-        public decimal ShoesSize { get; set; }
-        public bool DrivingLicence { get; set; }
+        public float? TshirtSize { get; set; }
+        public float? PantSize { get; set; }
+        public float? ShoesSize { get; set; }
+        public bool? DrivingLicence { get; set; }
 
-        [StringLength(10, MinimumLength = 1)]
+        [StringLength(10, MinimumLength = 0)]
         public string DrivingLicenceClass { get; set; }
-
-        public bool ForkliftLicence { get; set; }
-        public bool CraneOperationLicense { get; set; }
-
-        [ForeignKey("CourseNSeminar")]
+        public bool? ForkliftLicence { get; set; }
+        public bool? CraneOperationLicense { get; set; }
+        //[DefaultValue(0)]
         public int CourseNSeminarId { get; set; }
-
         public virtual CourseNSeminar CourseNSeminar { get; set; }
-
-        [ForeignKey("LangInfo")]
+        //[DefaultValue(0)]
         public int LangInfoId { get; set; }
-
         public virtual LangInfo LangInfo { get; set; }
-
-        [ForeignKey("ComputerSkill")]
+        //[DefaultValue(0)]
         public int ComputerSkillId { get; set; }
-
         public virtual ComputerSkill ComputerSkill { get; set; }
 
         // sağlık durumu ## 4.SAYFA ## ekle
-        public bool WorkingNow { get; set; }
-
+        public bool? WorkingNow { get; set; }
         public string JobChangeReason { get; set; }
-
-        [ForeignKey("JobHistory")]
+        //[DefaultValue(0)]
         public int JobHistoryId { get; set; }
-
         public virtual JobHistory JobHistory { get; set; }
-        public bool Ok4Overtime { get; set; }
-        public bool Ok4ShiftWork { get; set; }
-
-        [ForeignKey("FormResult")]
+        public bool? Ok4Overtime { get; set; }
+        public bool? Ok4ShiftWork { get; set; }
         public int FormResultId { get; set; }
-
         public virtual FormResult FormResult { get; set; }
-    }
-
-    public class FormDbContext : DbContext
-    {
-        public DbSet<Form> Forms { get; set; }
-        public DbSet<CourseNSeminar> CourseNSeminars { get; set; }
-        public DbSet<LangInfo> LangInfos { get; set; }
-        public DbSet<ComputerSkill> ComputerSkills { get; set; }
-        public DbSet<JobHistory> JobHistorys { get; set; }
     }
 }
