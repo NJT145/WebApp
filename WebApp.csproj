@@ -134,6 +134,7 @@
     <Compile Include="Models\ComputerSkill.cs" />
     <Compile Include="Models\CourseNSeminar.cs" />
     <Compile Include="Models\Form.cs" />
+    <Compile Include="Models\FormResult.cs" />
     <Compile Include="Models\JobHistory.cs" />
     <Compile Include="Models\LangInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
