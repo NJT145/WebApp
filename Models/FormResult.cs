@@ -19,7 +19,6 @@ namespace WebApp.Models
         public string MilitaryService { get; set; }
         public string EduStatus { get; set; }
         public string Address { get; set; }
-        [ForeignKey("Form")]
         public virtual Form Form { get; set; }
     }
 }
