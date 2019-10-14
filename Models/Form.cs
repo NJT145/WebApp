@@ -38,25 +38,16 @@ namespace WebApp.Models
         public string DrivingLicenceClass { get; set; }
         public bool? ForkliftLicence { get; set; }
         public bool? CraneOperationLicense { get; set; }
-        //[DefaultValue(0)]
-        public int CourseNSeminarId { get; set; }
         public virtual CourseNSeminar CourseNSeminar { get; set; }
-        //[DefaultValue(0)]
-        public int LangInfoId { get; set; }
         public virtual LangInfo LangInfo { get; set; }
-        //[DefaultValue(0)]
-        public int ComputerSkillId { get; set; }
         public virtual ComputerSkill ComputerSkill { get; set; }
 
         // sağlık durumu ## 4.SAYFA ## ekle
         public bool? WorkingNow { get; set; }
         public string JobChangeReason { get; set; }
-        //[DefaultValue(0)]
-        public int JobHistoryId { get; set; }
         public virtual JobHistory JobHistory { get; set; }
         public bool? Ok4Overtime { get; set; }
         public bool? Ok4ShiftWork { get; set; }
-        public int FormResultId { get; set; }
         public virtual FormResult FormResult { get; set; }
     }
 }

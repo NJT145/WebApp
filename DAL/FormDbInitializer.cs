@@ -3,21 +3,14 @@ using WebApp.Models;
 
 namespace WebApp.DAL
 {
-    public class FormDbInitializer : System.Data.Entity.DropCreateDatabaseIfModelChanges<FormDbContext>
+    public class FormDbInitializer : System.Data.Entity.DropCreateDatabaseAlways<FormDbContext>
     {
         protected override void Seed(FormDbContext context)
         {
-            // default values for empty values
             var emptyComputerSkill = new ComputerSkill { ComputerSkillName = "", ComputerSkillLevel = 0 };
             var emptyCourseNSeminar = new CourseNSeminar { Certificate = "", Topic = "" };
             var emptyJobHistory = new JobHistory { JobHistoryName = "", Mission = "", WorkDays = 0, Reason4Leaving = "" };
             var emptyLangInfo = new LangInfo { LangInfoName = "", LangInfoLevel = 0 };
-            context.ComputerSkills.Add(emptyComputerSkill);
-            context.CourseNSeminars.Add(emptyCourseNSeminar);
-            context.JobHistories.Add(emptyJobHistory);
-            context.LangInfos.Add(emptyLangInfo);
-            context.SaveChanges();
-
             var form1 = new Form
             {
                 FirstMidName = "Adam",

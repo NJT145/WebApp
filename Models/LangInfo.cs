@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
@@ -14,7 +15,7 @@ namespace WebApp.Models
         public int LangInfoId { get; set; }
         [StringLength(120, MinimumLength = 0)]
         public string LangInfoName { get; set; }
-        [Range(0, 4)]
+        [Range(0, 4), DefaultValue(0)]
         public int LangInfoLevel { get; set; }
         public virtual ICollection<Form> Forms { get; set; }
     }

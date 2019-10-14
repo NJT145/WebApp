@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
@@ -16,7 +17,7 @@ namespace WebApp.Models
         public string JobHistoryName { get; set; }
         [StringLength(250, MinimumLength = 0)]
         public string Mission { get; set; }
-        [Range(0,1000000)]
+        [Range(0,1000000), DefaultValue(0)]
         public int WorkDays { get; set; }
         [StringLength(250, MinimumLength = 0)]
         public string Reason4Leaving { get; set; }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
@@ -12,6 +13,7 @@ namespace WebApp.Models
     {
         [Key]
         public int FormResultId { get; set; }
+        [DefaultValue(false)]
         public bool FormResultConfirmed { get; set; }
         public string FormResultPrice { get; set; }
         public string FormResultShiftWork { get; set; }
@@ -19,7 +21,6 @@ namespace WebApp.Models
         public string FormResultMilitaryService { get; set; }
         public string FormResultEduStatus { get; set; }
         public string FormResultAddress { get; set; }
-        //[ForeignKey("Form")]
         public virtual Form Form { get; set; }
     }
 }

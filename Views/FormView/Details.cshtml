@@ -1,6 +1,7 @@
 ﻿@model WebApp.Models.Form
 
 @{
+    Layout = "~/Views/FormView/_LayoutFormView.cshtml";
     ViewBag.Title = "Details";
 }
 
@@ -10,38 +11,6 @@
     <h4>Form</h4>
     <hr />
     <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.ComputerSkill.ComputerSkillName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ComputerSkill.ComputerSkillName)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.CourseNSeminar.Certificate)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.CourseNSeminar.Certificate)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.JobHistory.JobHistoryName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.JobHistory.JobHistoryName)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.LangInfo.LangInfoName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.LangInfo.LangInfoName)
-        </dd>
-
         <dt>
             @Html.DisplayNameFor(model => model.FirstMidName)
         </dt>
@@ -176,14 +145,6 @@
 
         <dd>
             @Html.DisplayFor(model => model.Ok4ShiftWork)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.FormResultId)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.FormResultId)
         </dd>
 
     </dl>
