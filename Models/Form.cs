@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -16,7 +17,7 @@ namespace WebApp.Models
         value4
     }
 
-    public enum LangInfoEnum
+    public enum LevelEnum
     {
         [Display(Name = "Az")]
         value1,
@@ -107,21 +108,59 @@ namespace WebApp.Models
         //#endregion: remove these part after make it dynamic
         public virtual LangInfo LangInfo { get; set; }
         //#region: remove these part after make it dynamic
-        public LangInfoEnum? LangInfo_eng { get; set; }
-        public LangInfoEnum? LangInfo_de { get; set; }
-        public LangInfoEnum? LangInfo_fr { get; set; }
-        public LangInfoEnum? LangInfo_other { get; set; }
+        public LevelEnum? LangInfo_eng { get; set; }
+        public LevelEnum? LangInfo_de { get; set; }
+        public LevelEnum? LangInfo_fr { get; set; }
+        public LevelEnum? LangInfo_other { get; set; }
         public string LangInfo_other_name { get; set; }
         //#endregion: remove these part after make it dynamic
         public virtual ComputerSkill ComputerSkill { get; set; }
         //#region: remove these part after make it dynamic
-        
+        public LevelEnum? ComputerSkill_word { get; set; }
+        public LevelEnum? ComputerSkill_excel { get; set; }
+        public LevelEnum? ComputerSkill_powerpoint { get; set; }
+        public LevelEnum? ComputerSkill_other1 { get; set; }
+        public LevelEnum? ComputerSkill_other2 { get; set; }
+        public LevelEnum? ComputerSkill_other3 { get; set; }
         //#endregion: remove these part after make it dynamic
-        // sağlık durumu ## 4.SAYFA ## ekle
+        //#region: manage here at a separate table
+        public bool? HealthQuestion1 { get; set; }
+        public bool? HealthQuestion2 { get; set; }
+        public bool? HealthQuestion3 { get; set; }
+        public bool? HealthQuestion4 { get; set; }
+        public bool? HealthQuestion5 { get; set; }
+        public bool? HealthQuestion6 { get; set; }
+        //#endregion: manage here at a separate table
         public bool? WorkingNow { get; set; }
 
         public string JobChangeReason { get; set; }
         public virtual JobHistory JobHistory { get; set; }
+        //#region: remove these part after make it dynamic
+        [StringLength(250, MinimumLength = 0)]
+        public string JobHistoryName1 { get; set; }
+        [StringLength(250, MinimumLength = 0)]
+        public string JobHistoryMission1 { get; set; }
+        [Range(0, 1000000), DefaultValue(0)]
+        public int JobHistoryWorkDays1 { get; set; }
+        [StringLength(250, MinimumLength = 0)]
+        public string JobHistoryReason4Leaving1 { get; set; }
+        [StringLength(250, MinimumLength = 0)]
+        public string JobHistoryName12{ get; set; }
+        [StringLength(250, MinimumLength = 0)]
+        public string JobHistoryMission2 { get; set; }
+        [Range(0, 1000000), DefaultValue(0)]
+        public int JobHistoryWorkDays2 { get; set; }
+        [StringLength(250, MinimumLength = 0)]
+        public string JobHistoryReason4Leaving2 { get; set; }
+        [StringLength(250, MinimumLength = 0)]
+        public string JobHistoryName3 { get; set; }
+        [StringLength(250, MinimumLength = 0)]
+        public string JobHistoryMission3 { get; set; }
+        [Range(0, 1000000), DefaultValue(0)]
+        public int JobHistoryWorkDays3 { get; set; }
+        [StringLength(250, MinimumLength = 0)]
+        public string JobHistoryReason4Leaving3 { get; set; }
+        //#endregion: remove these part after make it dynamic
         public bool? Ok4Overtime { get; set; }
         public bool? Ok4ShiftWork { get; set; }
         public virtual FormResult FormResult { get; set; }

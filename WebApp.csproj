@@ -127,7 +127,6 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\FormResultsController.cs" />
     <Compile Include="Controllers\FormsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="DAL\FormDbContext.cs" />
@@ -208,12 +207,8 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\FormResults\Create.cshtml" />
-    <Content Include="Views\FormResults\Delete.cshtml" />
-    <Content Include="Views\FormResults\Details.cshtml" />
-    <Content Include="Views\FormResults\Edit.cshtml" />
-    <Content Include="Views\FormResults\Index.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\Enum.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\Enum.cshtml" />
     <Content Include="Views\Forms\Create.cshtml" />
     <Content Include="Views\Forms\Delete.cshtml" />
     <Content Include="Views\Forms\Details.cshtml" />
