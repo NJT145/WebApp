@@ -85,5 +85,11 @@ namespace WebApp.Controllers
                 return View();
             }
         }
+
+        public ActionResult EmploymentApplicationForm()
+        {
+            return View();
+        }
+
     }
 }

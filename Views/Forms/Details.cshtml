@@ -1,0 +1,546 @@
+﻿@model WebApp.Models.Form
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Form</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstMidName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstMidName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BirthDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BirthDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PhoneNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhoneNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MilitaryService)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MilitaryService)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MilitaryServiceEnum)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MilitaryServiceEnum)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TshirtSize)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TshirtSize)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PantSize)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PantSize)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ShoesSize)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ShoesSize)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DrivingLicence)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DrivingLicence)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DrivingLicenceClass)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DrivingLicenceClass)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ForkliftLicence)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ForkliftLicence)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CraneOperationLicense)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CraneOperationLicense)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PrimarySchool_bool)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PrimarySchool_bool)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PrimarySchool_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PrimarySchool_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SecondarySchool_bool)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SecondarySchool_bool)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SecondarySchool_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SecondarySchool_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HighSchool_bool)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HighSchool_bool)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HighSchool_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HighSchool_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AssociateDegree_bool)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AssociateDegree_bool)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AssociateDegree_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AssociateDegree_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BachelorDegree_bool)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BachelorDegree_bool)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BachelorDegree_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BachelorDegree_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MasterDegree_bool)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MasterDegree_bool)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MasterDegree_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MasterDegree_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CourseNSeminar1_Certificate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CourseNSeminar1_Certificate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CourseNSeminar1_Topic)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CourseNSeminar1_Topic)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CourseNSeminar2_Certificate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CourseNSeminar2_Certificate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CourseNSeminar2_Topic)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CourseNSeminar2_Topic)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CourseNSeminar3_Certificate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CourseNSeminar3_Certificate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CourseNSeminar3_Topic)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CourseNSeminar3_Topic)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LangInfo_eng)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LangInfo_eng)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LangInfo_de)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LangInfo_de)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LangInfo_fr)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LangInfo_fr)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LangInfo_other)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LangInfo_other)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LangInfo_other_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LangInfo_other_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ComputerSkill_word)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ComputerSkill_word)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ComputerSkill_excel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ComputerSkill_excel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ComputerSkill_powerpoint)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ComputerSkill_powerpoint)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ComputerSkill_other1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ComputerSkill_other1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ComputerSkill_other2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ComputerSkill_other2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ComputerSkill_other3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ComputerSkill_other3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HealthQuestion1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HealthQuestion1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HealthQuestion2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HealthQuestion2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HealthQuestion3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HealthQuestion3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HealthQuestion4)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HealthQuestion4)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HealthQuestion5)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HealthQuestion5)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HealthQuestion6)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HealthQuestion6)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LegalObstacle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LegalObstacle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WorkingNow)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WorkingNow)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JobChangeReason)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JobChangeReason)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JobHistoryName1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JobHistoryName1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JobHistoryMission1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JobHistoryMission1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JobHistoryWorkDays1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JobHistoryWorkDays1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JobHistoryReason4Leaving1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JobHistoryReason4Leaving1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JobHistoryName2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JobHistoryName2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JobHistoryMission2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JobHistoryMission2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JobHistoryWorkDays2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JobHistoryWorkDays2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JobHistoryReason4Leaving2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JobHistoryReason4Leaving2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JobHistoryName3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JobHistoryName3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JobHistoryMission3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JobHistoryMission3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JobHistoryWorkDays3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JobHistoryWorkDays3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JobHistoryReason4Leaving3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JobHistoryReason4Leaving3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ok4Overtime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ok4Overtime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ok4ShiftWork)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ok4ShiftWork)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.FormId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

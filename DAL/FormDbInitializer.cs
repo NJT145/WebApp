@@ -18,14 +18,14 @@ namespace WebApp.DAL
                 BirthDate = DateTime.Parse("2005-09-01"),
                 PhoneNumber = "5303003030",
                 Address = "KISIKLI MAH., Alemdag Cad., Yanyol Sok., No 6-8, 34692, ÜSKÜDAR / ISTANBUL / TURKEY",
-                MilitaryService = "Yapıldı",
-                MilitaryServiceEnum = MilitaryServiceEnum.value1,
-                TshirtSize = float.Parse("53,5"),
-                PantSize = float.Parse("64,5"),
-                ShoesSize = float.Parse("64,5"),
-                DrivingLicence = true,
-                DrivingLicenceClass = "A",
-                ForkliftLicence = true,
+                //MilitaryService = "Yapıldı",
+                //MilitaryServiceEnum = MilitaryServiceEnum.value1,
+                //TshirtSize = float.Parse("53,5"),
+                //PantSize = float.Parse("64,5"),
+                //ShoesSize = float.Parse("64,5"),
+                //DrivingLicence = true,
+                //DrivingLicenceClass = "A",
+                //ForkliftLicence = true,
             };
             //form1.ComputerSkill = emptyComputerSkill;
             //form1.CourseNSeminar = emptyCourseNSeminar;
