@@ -127,8 +127,8 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\FormResultsController.cs" />
-    <Compile Include="Controllers\FormsController.cs" />
     <Compile Include="Controllers\FormViewController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="DAL\FormDbContext.cs" />
@@ -211,21 +211,13 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\Enum.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\Enum.cshtml" />
-    <Content Include="Views\Forms\Create.cshtml" />
-    <Content Include="Views\Forms\Delete.cshtml" />
-    <Content Include="Views\Forms\Details.cshtml" />
-    <Content Include="Views\Forms\Edit.cshtml" />
-    <Content Include="Views\Forms\Index.cshtml" />
-    <Content Include="Views\FormView\Create.cshtml" />
-    <Content Include="Views\FormView\Delete.cshtml" />
-    <Content Include="Views\FormView\Details.cshtml" />
-    <Content Include="Views\FormView\Edit.cshtml" />
-    <Content Include="Views\FormView\Index.cshtml" />
     <Content Include="Views\FormResults\Create.cshtml" />
     <Content Include="Views\FormResults\Delete.cshtml" />
     <Content Include="Views\FormResults\Details.cshtml" />
     <Content Include="Views\FormResults\Edit.cshtml" />
     <Content Include="Views\FormResults\Index.cshtml" />
+    <Content Include="Views\Shared\_LayoutFormView.cshtml" />
+    <Content Include="Views\FormView\_PersonalInfo.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -246,7 +238,9 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Views\Default\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

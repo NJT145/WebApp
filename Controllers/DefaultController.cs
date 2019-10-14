@@ -6,27 +6,27 @@ using System.Web.Mvc;
 
 namespace WebApp.Controllers
 {
-    public class FormViewController : Controller
+    public class DefaultController : Controller
     {
-        // GET: FormView
+        // GET: Default
         public ActionResult Index()
         {
             return View();
         }
 
-        // GET: FormView/Details/5
+        // GET: Default/Details/5
         public ActionResult Details(int id)
         {
             return View();
         }
 
-        // GET: FormView/Create
+        // GET: Default/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: FormView/Create
+        // POST: Default/Create
         [HttpPost]
         public ActionResult Create(FormCollection collection)
         {
@@ -42,13 +42,13 @@ namespace WebApp.Controllers
             }
         }
 
-        // GET: FormView/Edit/5
+        // GET: Default/Edit/5
         public ActionResult Edit(int id)
         {
             return View();
         }
 
-        // POST: FormView/Edit/5
+        // POST: Default/Edit/5
         [HttpPost]
         public ActionResult Edit(int id, FormCollection collection)
         {
@@ -64,13 +64,13 @@ namespace WebApp.Controllers
             }
         }
 
-        // GET: FormView/Delete/5
+        // GET: Default/Delete/5
         public ActionResult Delete(int id)
         {
             return View();
         }
 
-        // POST: FormView/Delete/5
+        // POST: Default/Delete/5
         [HttpPost]
         public ActionResult Delete(int id, FormCollection collection)
         {

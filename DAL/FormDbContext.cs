@@ -22,19 +22,19 @@ namespace WebApp.DAL
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            // configures zero-or-one-to-many relationship
-            modelBuilder.Entity<Form>()
-                .HasRequired<ComputerSkill>(s => s.ComputerSkill)
-                .WithMany(g => g.Forms);
-            modelBuilder.Entity<Form>()
-                .HasRequired<CourseNSeminar>(s => s.CourseNSeminar)
-                .WithMany(g => g.Forms);
-            modelBuilder.Entity<Form>()
-                .HasRequired<JobHistory>(s => s.JobHistory)
-                .WithMany(g => g.Forms);
-            modelBuilder.Entity<Form>()
-                .HasRequired<LangInfo>(s => s.LangInfo)
-                .WithMany(g => g.Forms);
+            //// configures zero-or-one-to-many relationship
+            //modelBuilder.Entity<Form>()
+            //    .HasRequired<ComputerSkill>(s => s.ComputerSkill)
+            //    .WithMany(g => g.Forms);
+            //modelBuilder.Entity<Form>()
+            //    .HasRequired<CourseNSeminar>(s => s.CourseNSeminar)
+            //    .WithMany(g => g.Forms);
+            //modelBuilder.Entity<Form>()
+            //    .HasRequired<JobHistory>(s => s.JobHistory)
+            //    .WithMany(g => g.Forms);
+            //modelBuilder.Entity<Form>()
+            //    .HasRequired<LangInfo>(s => s.LangInfo)
+            //    .WithMany(g => g.Forms);
 
             // Configure FormId as FK for FormResult
             modelBuilder.Entity<Form>()
