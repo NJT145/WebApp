@@ -1,0 +1,71 @@
+﻿@model IEnumerable<WebApp.Models.Form>
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "_Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstMidName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BirthDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PhoneNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MilitaryServiceEnum)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ok4Overtime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ok4ShiftWork)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FirstMidName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BirthDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PhoneNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MilitaryServiceEnum)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ok4Overtime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ok4ShiftWork)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "_Edit", new { id=item.FormId }) |
+            @Html.ActionLink("Details", "_Details", new { id=item.FormId }) |
+            @Html.ActionLink("Delete", "_Delete", new { id=item.FormId })
+        </td>
+    </tr>
+}
+
+</table>

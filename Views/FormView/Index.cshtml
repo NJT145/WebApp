@@ -1,0 +1,113 @@
+﻿@{
+    ViewBag.Title = "İş Başvuru Formu";
+}
+
+<style type="text/css">
+    body {
+        font-family: "Lato", sans-serif;
+    }
+
+    .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: auto;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+    }
+
+        .sidenav ul.li {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+            .sidenav ul.li:hover {
+                color: #f1f1f1;
+            }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+    #main {
+        transition: margin-left .5s;
+        padding: 16px;
+    }
+
+    @@media screen and (max-height: 450px) {
+        .sidenav {
+            padding-top: 15px;
+        }
+
+            .sidenav ul.li {
+                font-size: 18px;
+            }
+    }
+</style>
+
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <ul>
+        <li>
+            <a href="javascript:void(0)" role="button" onclick="indexPagebtnOnClick()">
+                Formları gör
+            </a>
+        </li>
+        <li>
+            <a href="javascript:void(0)" role="button" onclick="createPagebtnOnClick()">
+                Form oluştur
+            </a>
+        </li>
+    </ul>
+</div>
+
+<div id="main" class="container">
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+    <div id="partialContent" class="container">
+        Soldaki menüden işlemi seçebilirsiniz.
+    </div>
+</div>
+<script>
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+    }
+
+    function indexPagebtnOnClick() {
+        var response = $(document).ready(function () {
+            $("#partialContent").load('/FormView/_Index');
+        });
+        document.getElementById("partialContent").html(response);
+    }
+
+    function createPagebtnOnClick() {
+        var response = $(document).ready(function () {
+            $("#partialContent").load('/FormView/_Create');
+        });
+        document.getElementById("partialContent").html(response);
+    }
+
+    function evaluatePagebtnOnClick() {
+        var response = $(document).ready(function () {
+            $("#partialContent").load('/FormView/_Evaluate');
+        });
+        document.getElementById("partialContent").html(response);
+    }
+</script>

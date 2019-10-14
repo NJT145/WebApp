@@ -49,15 +49,7 @@
         <dd>
             @Html.DisplayFor(model => model.Address)
         </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.MilitaryService)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.MilitaryService)
-        </dd>
-
+        
         <dt>
             @Html.DisplayNameFor(model => model.MilitaryServiceEnum)
         </dt>
@@ -122,13 +114,7 @@
             @Html.DisplayFor(model => model.CraneOperationLicense)
         </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.PrimarySchool_bool)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.PrimarySchool_bool)
-        </dd>
+        
 
         <dt>
             @Html.DisplayNameFor(model => model.PrimarySchool_name)
@@ -138,13 +124,7 @@
             @Html.DisplayFor(model => model.PrimarySchool_name)
         </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.SecondarySchool_bool)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.SecondarySchool_bool)
-        </dd>
+        
 
         <dt>
             @Html.DisplayNameFor(model => model.SecondarySchool_name)
@@ -154,13 +134,7 @@
             @Html.DisplayFor(model => model.SecondarySchool_name)
         </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.HighSchool_bool)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.HighSchool_bool)
-        </dd>
+        
 
         <dt>
             @Html.DisplayNameFor(model => model.HighSchool_name)
@@ -170,13 +144,7 @@
             @Html.DisplayFor(model => model.HighSchool_name)
         </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.AssociateDegree_bool)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.AssociateDegree_bool)
-        </dd>
+        
 
         <dt>
             @Html.DisplayNameFor(model => model.AssociateDegree_name)
@@ -186,13 +154,7 @@
             @Html.DisplayFor(model => model.AssociateDegree_name)
         </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.BachelorDegree_bool)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.BachelorDegree_bool)
-        </dd>
+        
 
         <dt>
             @Html.DisplayNameFor(model => model.BachelorDegree_name)
@@ -202,13 +164,7 @@
             @Html.DisplayFor(model => model.BachelorDegree_name)
         </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.MasterDegree_bool)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.MasterDegree_bool)
-        </dd>
+        
 
         <dt>
             @Html.DisplayNameFor(model => model.MasterDegree_name)
@@ -541,6 +497,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.FormId }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Edit", "_Edit", new { id = Model.FormId }) |
+    @Html.ActionLink("Back to List", "_Index")
 </p>

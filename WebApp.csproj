@@ -149,10 +149,6 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\DefaultApiRestController.cs" />
-    <Compile Include="Controllers\DefaultController.cs" />
-    <Compile Include="Controllers\FormResultsController.cs" />
-    <Compile Include="Controllers\FormsController.cs" />
     <Compile Include="Controllers\FormViewController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="DAL\FormDbContext.cs" />
@@ -160,12 +156,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\ComputerSkill.cs" />
-    <Compile Include="Models\CourseNSeminar.cs" />
     <Compile Include="Models\Form.cs" />
     <Compile Include="Models\FormResult.cs" />
-    <Compile Include="Models\JobHistory.cs" />
-    <Compile Include="Models\LangInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -235,20 +227,15 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\Enum.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\Enum.cshtml" />
-    <Content Include="Views\FormView\_PersonalInfo.cshtml" />
+    <Content Include="Views\FormView\_Create.cshtml" />
     <Content Include="Views\Shared\_HeaderNavBar.cshtml" />
-    <Content Include="Views\Forms\Create.cshtml" />
-    <Content Include="Views\Forms\Delete.cshtml" />
-    <Content Include="Views\Forms\Details.cshtml" />
-    <Content Include="Views\Forms\Edit.cshtml" />
-    <Content Include="Views\Forms\Index.cshtml" />
-    <Content Include="Views\FormResults\Create.cshtml" />
-    <Content Include="Views\FormResults\Delete.cshtml" />
-    <Content Include="Views\FormResults\Details.cshtml" />
-    <Content Include="Views\FormResults\Edit.cshtml" />
-    <Content Include="Views\FormResults\Index.cshtml" />
-    <Content Include="Views\FormView\EmploymentApplicationForm.cshtml" />
+    <Content Include="Views\FormView\Index.cshtml" />
     <Content Include="Views\Shared\_FooterNavBar.cshtml" />
+    <Content Include="Views\FormView\_Index.cshtml" />
+    <Content Include="Views\FormView\_Evaluate.cshtml" />
+    <Content Include="Views\FormView\_Edit.cshtml" />
+    <Content Include="Views\FormView\_Details.cshtml" />
+    <Content Include="Views\FormView\_Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -269,9 +256,7 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\Default\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

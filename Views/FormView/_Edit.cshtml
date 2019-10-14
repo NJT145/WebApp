@@ -1,13 +1,13 @@
 ﻿@model WebApp.Models.Form
 
 @{
-    ViewBag.Title = "Create";
+    ViewBag.Title = "Edit";
 }
 
-<h2>Create</h2>
+<h2>Edit</h2>
 
 
-@using (Html.BeginForm()) 
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
     
@@ -15,6 +15,8 @@
         <h4>Form</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.FormId)
+
         <div class="form-group">
             @Html.LabelFor(model => model.FirstMidName, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -54,15 +56,7 @@
                 @Html.ValidationMessageFor(model => model.Address, "", new { @class = "text-danger" })
             </div>
         </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.MilitaryService, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.MilitaryService, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.MilitaryService, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
+        
         <div class="form-group">
             @Html.LabelFor(model => model.MilitaryServiceEnum, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -134,16 +128,6 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.PrimarySchool_bool, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                <div class="checkbox">
-                    @Html.EditorFor(model => model.PrimarySchool_bool)
-                    @Html.ValidationMessageFor(model => model.PrimarySchool_bool, "", new { @class = "text-danger" })
-                </div>
-            </div>
-        </div>
-
-        <div class="form-group">
             @Html.LabelFor(model => model.PrimarySchool_name, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.PrimarySchool_name, new { htmlAttributes = new { @class = "form-control" } })
@@ -151,15 +135,7 @@
             </div>
         </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.SecondarySchool_bool, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                <div class="checkbox">
-                    @Html.EditorFor(model => model.SecondarySchool_bool)
-                    @Html.ValidationMessageFor(model => model.SecondarySchool_bool, "", new { @class = "text-danger" })
-                </div>
-            </div>
-        </div>
+        
 
         <div class="form-group">
             @Html.LabelFor(model => model.SecondarySchool_name, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -169,15 +145,7 @@
             </div>
         </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.HighSchool_bool, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                <div class="checkbox">
-                    @Html.EditorFor(model => model.HighSchool_bool)
-                    @Html.ValidationMessageFor(model => model.HighSchool_bool, "", new { @class = "text-danger" })
-                </div>
-            </div>
-        </div>
+        
 
         <div class="form-group">
             @Html.LabelFor(model => model.HighSchool_name, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -187,15 +155,7 @@
             </div>
         </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.AssociateDegree_bool, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                <div class="checkbox">
-                    @Html.EditorFor(model => model.AssociateDegree_bool)
-                    @Html.ValidationMessageFor(model => model.AssociateDegree_bool, "", new { @class = "text-danger" })
-                </div>
-            </div>
-        </div>
+        
 
         <div class="form-group">
             @Html.LabelFor(model => model.AssociateDegree_name, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -205,15 +165,7 @@
             </div>
         </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.BachelorDegree_bool, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                <div class="checkbox">
-                    @Html.EditorFor(model => model.BachelorDegree_bool)
-                    @Html.ValidationMessageFor(model => model.BachelorDegree_bool, "", new { @class = "text-danger" })
-                </div>
-            </div>
-        </div>
+        
 
         <div class="form-group">
             @Html.LabelFor(model => model.BachelorDegree_name, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -223,15 +175,7 @@
             </div>
         </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.MasterDegree_bool, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                <div class="checkbox">
-                    @Html.EditorFor(model => model.MasterDegree_bool)
-                    @Html.ValidationMessageFor(model => model.MasterDegree_bool, "", new { @class = "text-danger" })
-                </div>
-            </div>
-        </div>
+        
 
         <div class="form-group">
             @Html.LabelFor(model => model.MasterDegree_name, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -583,14 +527,14 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="submit" value="Kaydet ve devam et" class="btn btn-default" />
             </div>
         </div>
     </div>
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Back to List", "_Index")
 </div>
 
 @section Scripts {
