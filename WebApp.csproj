@@ -248,6 +248,7 @@
     <Content Include="Views\FormResults\Edit.cshtml" />
     <Content Include="Views\FormResults\Index.cshtml" />
     <Content Include="Views\FormView\EmploymentApplicationForm.cshtml" />
+    <Content Include="Views\Shared\_FooterNavBar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
